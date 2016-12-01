@@ -1,6 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@page import="com.arthouse.dao.ProductDAO, com.arthouse.domain.*, java.util.*"%>
+<%@page import="com.arthouse.dao.ProductDAO"%>
+<%@ page import="com.arthouse.domain.*"%>
+<%@ page import="java.util.*"%>
 
 <% String type = (String) session.getAttribute("userid"); %>
 <!DOCTYPE html>

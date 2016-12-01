@@ -49,7 +49,7 @@ public class RegisterBuyerController extends HttpServlet {
 		RequestDispatcher errodis = getServletContext().getRequestDispatcher("/errorpage.jsp");
 		
 		//define RequestDispatcher object to forward if data are correct and successfully stored in database
-		RequestDispatcher succdis = getServletContext().getRequestDispatcher("/loginbuyer.jsp");
+		RequestDispatcher succdis = getServletContext().getRequestDispatcher("/loginBuyer");
 
 		try {
 
@@ -63,6 +63,9 @@ public class RegisterBuyerController extends HttpServlet {
 			bdao.close(); // close connection
 
 			//request.setAttribute("buyerobj", buyero); 
+			
+			request.setAttribute("username", username);
+			request.setAttribute("password", password);
 
 			succdis.forward(request, response);
 			return;

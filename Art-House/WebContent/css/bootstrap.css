@@ -3374,7 +3374,7 @@ fieldset[disabled] .btn-warning.focus {
 .btn-danger.active.focus,
 .open > .dropdown-toggle.btn-danger.focus {
   color: #fff;
-  background-color: #ac2925;
+  background-color: #219e6a;
   border-color: #761c19;
 }
 .btn-danger:active,
