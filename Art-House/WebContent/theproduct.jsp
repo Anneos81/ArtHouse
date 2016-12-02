@@ -153,17 +153,20 @@ if (type == "buyer"){
 										aria-label="Left Align" name="cart" value="">Add to cart</button>
 								</form>
 													
-			<%}%>
-		<!-- else {
-					//String msg1 = "You have to login as buyer to add to cart";
+			<%}
+			 else {
+					String msg1 = "You have to login as buyer to add to cart. If you don't have an account please register.";
 					
 				%>
-								<form method="POST" action="<%//session.setAttribute("msg", "You have to login as buyer to add to cart");%>errorpage.jsp"> 
-								
+								<form method="POST" action="loginbuyer.jsp"> 
+	
+									<input type="hidden" name="product_id" value="<%=p.getProduct_id()%>">
+									<input type="hidden" name="avg_p" value="<%=g %>">
+									<input type="hidden" name="mymsg" value="<%=msg1 %>">
 									<button type="submit" class="btn btn-default"
 										aria-label="Left Align" name="cart" value="">Add to cart</button>
 								</form>
-					<% //} end of else %>		-->			
+					<% } //end of else %>					
 					
                           </div>
                     </div>

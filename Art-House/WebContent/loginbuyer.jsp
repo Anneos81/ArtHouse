@@ -10,6 +10,12 @@ if(session.getAttribute("user-object") != null) {
 	<jsp:forward page="errorpage.jsp" />
 	
 <% }
+int pid=0;
+String productId = request.getParameter("product_id");
+if(productId!=null){
+	pid = Integer.parseInt(productId);
+}
+String avgRating = request.getParameter("avg_p");
 %>
 
 <!DOCTYPE html>
@@ -60,7 +66,14 @@ if(session.getAttribute("user-object") != null) {
             <div class="col-md-9">
            <% if(request.getAttribute("msg") != null) { %>		
 				<div class="alert alert-danger text-center" role="alert"><%=request.getAttribute("msg").toString() %></div>
-			<% } %>
+			<% } 
+          		 if (request.getParameter("mymsg") != null) {
+				%>
+				<div class="alert alert-success text-center" role="alert"><%=request.getParameter("mymsg").toString()%></div>
+				<%
+					}
+				
+				%>
   <br> <br> <br> <br> <br> 
                  <div class="col-xs-12 col-md-8 login">
             	
@@ -84,6 +97,7 @@ if(session.getAttribute("user-object") != null) {
 			                  <a href="registerbuyer.jsp">Register</a>
 			            </div>
 			          </div>
+			          <input type="hidden" name="product_id" value="<%=pid%>"> <input type="hidden" name="avg_p" value="<%=avgRating%>">
 			          <div class="form-group">
 			            <div class="col-sm-offset-2 col-sm-10">
 			              <button type="submit" class="btn btn-default">Login</button>
