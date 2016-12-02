@@ -8,43 +8,31 @@ public class User {
 	private String name;
 	private String surname;
 	private String email;
-	private int phone_number;
-	private String town;
-	private String address;
 	
 	public User(){}
 	
-	public User(int user_id, String username, String password, String name, String surname, String email,
-			int phone_number, String town, String address) {
+	public User(int user_id, String username, String password, String name, String surname, String email) {
 		this.user_id = user_id;
 		this.username = username;
 		this.password = password;
 		this.name = name;
 		this.surname = surname;
 		this.email = email;
-		this.phone_number = phone_number;
-		this.town = town;
-		this.address = address;
 
 }
 	
 	@Override
 	public String toString() {
 		return "User [user_id=" + user_id + ", username=" + username + ", password=" + password + ", name=" + name
-				+ ", surname=" + surname + ", email=" + email + ", phone_number=" + phone_number + ", town=" + town
-				+ ", address=" + address + "]";
+				+ ", surname=" + surname + ", email=" + email + "]";
 	}
 
-	public User(String username, String password, String name, String surname, String email,
-			int phone_number, String town, String address) {
+	public User(String username, String password, String name, String surname, String email) {
 		this.username = username;
 		this.password = password;
 		this.name = name;
 		this.surname = surname;
 		this.email = email;
-		this.phone_number = phone_number;
-		this.town = town;
-		this.address = address;
 
 }
 	public User(String name, String surname){
@@ -99,29 +87,4 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
-	public int getPhone_number() {
-		return phone_number;
-	}
-
-	public void setPhone_number(int phone_number) {
-		this.phone_number = phone_number;
-	}
-
-	public String getTown() {
-		return town;
-	}
-
-	public void setTown(String town) {
-		this.town = town;
-	}
-
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-	
 }

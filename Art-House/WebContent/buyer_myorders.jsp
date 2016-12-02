@@ -66,8 +66,8 @@ Buyer buyer1 = (Buyer)session.getAttribute("user-object");
         <div class="row">
 
             <div class="col-md-3">
-            
-                 <p align="center"><img src="images/ourlogo.png" alt="logo icon" width="100"></p><br>
+            	
+                 <p align="center"><a href="homepage.jsp"><img src="images/ourlogo.png" alt="logo icon" width="100"></a></p><br>
                 <div class="list-group">
 	                <a href="buyer_ratedprod.jsp" class="list-group-item"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Buyer: <%=buyer1.getUsername() %></a>
 	                <a href="buyer_ratedprod.jsp" class="list-group-item">My Rated Products</a>

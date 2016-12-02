@@ -5,14 +5,15 @@
     <div id="about" class="container ">
       <h3 class="text-center">About this site</h3>
       <ul class="nav nav-tabs">
-        <li class="active"><a data-toggle="tab" href="#home">About our Buyers</a></li>
+        <li class="active"><a data-toggle="tab" href="#menu0">About our Buyers</a></li>
         <li><a data-toggle="tab" href="#menu1">About our Sellers</a></li>
         <li><a data-toggle="tab" href="#menu2">Our Team</a></li>  
         <li><a data-toggle="tab" href="#menu3">Contact</a></li>
+        <li><a data-toggle="tab" href="#menu4">Where to find us</a></li>
       </ul>
 
       <div class="tab-content">
-        <div id="home" class="tab-pane fade in active">
+        <div id="menu0" class="tab-pane fade in active">
   			<h2>Art-House promises that you will find paintings for every taste...</h2>
 			<p>Founded in October of 2016 and based in Athens, Greece, Art-House is a trusted community marketplace for people to list, 
 			discover, and buy unique paintings around the world — online or from a mobile phone or tablet. Easily and quickly 
@@ -39,8 +40,46 @@
           <p><span class="glyphicon glyphicon-phone"></span>Phone: +30 2102914743</p>
           <p><span class="glyphicon glyphicon-envelope"></span>Email: art-house@outlook.com</p>
         </div>
-      </div>
-    </div>
+         <div id="menu4" class="tab-pane fade">
+          <br>
+          <p>Art-House is located in Athens, just 20 minutes by bus from Athens' Center
+           and within easy access of the A1 bus. Our address is: Leoforos Athinon 47</p>
+           <p>
+            <!-- Add Google Maps -->
+			<div id="googleMap" style="height: 400px; width: 100%;"></div>
+			<script type="text/javascript">
+
+		var myCenter = new google.maps.LatLng(37.990832, 23.7033199);
+		<!--Athens-->
+
+		function initialize() {
+			var mapProp = {
+				center : myCenter,
+				zoom : 12,
+				scrollwheel : false,
+				draggable : false,
+				mapTypeId : google.maps.MapTypeId.ROADMAP
+			};
+
+			var map = new google.maps.Map(document.getElementById("googleMap"),
+					mapProp);
+
+			var marker = new google.maps.Marker({
+				position : myCenter,
+			});
+
+			marker.setMap(map);
+		}
+
+		google.maps.event.addDomListener(window, 'load', initialize);
+			</script>
+           </p>
+		</div>
+		</div>
+		</div>
+		    
+		
+		      
     
     <footer class="container-fluid text-center">
 		<a href="#myPage" title="To Top"> 

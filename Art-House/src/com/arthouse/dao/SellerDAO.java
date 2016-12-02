@@ -29,7 +29,7 @@ public class SellerDAO {
 
 			try {
 				// establish a connection with the database and creates a Connection
-				con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/painting", "root", "12345");
+				con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/arthouse", "root", "rootroot");
 			    //con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost/painting", "root", "olgaioak8");
 			} catch (Exception e) {
 				con = null;
@@ -109,7 +109,7 @@ public class SellerDAO {
 				Seller seller = null;
 				
 				while(rs.next()) {
-					seller = new Seller(rs.getInt("user_id"),rs.getString("username"), rs.getString("password"),rs.getString("name"), rs.getString("surname"), rs.getString("email"), rs.getInt("phone_number"), rs.getString("town"), rs.getString("address"),rs.getString("photo"))  ;				
+					seller = new Seller(rs.getInt("user_id"),rs.getString("username"), rs.getString("password"),rs.getString("name"), rs.getString("surname"), rs.getString("email"), rs.getString("photo"))  ;				
 				}
 				
 				rs.close();
@@ -131,7 +131,7 @@ public class SellerDAO {
 					throw new Exception("You must open a connection first");
 				}
 				
-				String sql= "INSERT INTO  seller (username, password, name, surname, email, phone_number, address, town, photo) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);";
+				String sql= "INSERT INTO  seller (username, password, name, surname, email, photo) VALUES (?, ?, ?, ?, ?, ?);";
 				
 				PreparedStatement stmt = con.prepareStatement(sql);
 				
@@ -141,9 +141,6 @@ public class SellerDAO {
 				stmt.setString( 3, seller.getName());
 				stmt.setString( 4, seller.getSurname());
 				stmt.setString( 5, seller.getEmail());
-				stmt.setInt( 6, seller.getPhone_number());
-				stmt.setString( 7, seller.getAddress());
-				stmt.setString( 8, seller.getTown());
 				stmt.setString( 9, seller.getPhoto_seller());
 				System.out.println(stmt.toString());
 				stmt.executeUpdate();			
@@ -180,10 +177,7 @@ public class SellerDAO {
 						rs.getString("password"),
 						rs.getString("name"), 
 						rs.getString("surname"), 
-						rs.getString("email"), 
-						rs.getInt("phone_number"),
-						rs.getString("town"),
-						rs.getString("address"));
+						rs.getString("email"));
 				}
 
 				rs.close();

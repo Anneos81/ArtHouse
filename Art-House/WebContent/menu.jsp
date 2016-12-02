@@ -3,8 +3,6 @@
 <%@page import="com.arthouse.dao.ProductDAO"%>
 <%@ page import="com.arthouse.domain.*"%>
 <%@ page import="java.util.*"%>
-
-
 	
 	
 		<%
@@ -67,6 +65,3 @@
 					  <li><a href="homepage.jsp?orderby=score">Rate</a></li>
                     </ul>
                   </div>
-                  
-                  
-    

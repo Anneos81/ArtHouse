@@ -5,19 +5,16 @@ public class Seller extends User {
 	
 	public Seller(){}
 	
-	public Seller(int user_id, String username, String password, String name, String surname, String email,
-			int phone_number, String town, String address) {
-		super(user_id, username, password, name, surname, email, phone_number, town, address);
+	public Seller(int user_id, String username, String password, String name, String surname, String email) {
+		super(user_id, username, password, name, surname, email);
 		// TODO Auto-generated constructor stub
 	}
-	public Seller(int user_id, String username, String password, String name, String surname, String email,
-			int phone_number, String town, String address, String photo) {
-		super(user_id, username, password, name, surname, email, phone_number, town, address);
+	public Seller(int user_id, String username, String password, String name, String surname, String email,String photo) {
+		super(user_id, username, password, name, surname, email);
 		this.photo_seller=photo;
 	}
-	public Seller(String username, String password, String name, String surname, String email,
-			int phone_number, String town, String address, String photo) {
-		super(username, password, name, surname, email, phone_number, town, address);
+	public Seller(String username, String password, String name, String surname, String email,String photo) {
+		super(username, password, name, surname, email);
 		this.photo_seller=photo;
 	}
 
@@ -39,7 +36,4 @@ public class Seller extends User {
 	public void setPhoto_seller(String photo_seller) {
 		this.photo_seller = photo_seller;
 	}
-	
-	
-	
 }

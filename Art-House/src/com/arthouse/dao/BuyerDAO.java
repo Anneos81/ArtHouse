@@ -29,7 +29,7 @@ public class BuyerDAO {
 
 			try {
 				// establish a connection with the database and creates a Connection
-				con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/painting", "root", "12345");
+				con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/arthouse", "root", "rootroot");
 				//con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost/painting", "root", "olgaioak8");
 			} catch (Exception e) {
 				con = null;
@@ -115,7 +115,7 @@ public class BuyerDAO {
 				Buyer buyer = null;
 				
 				while(rs.next()) {
-					buyer = new Buyer(rs.getInt("user_id"),rs.getString("username"), rs.getString("password"),rs.getString("name"), rs.getString("surname"), rs.getString("email"), rs.getInt("phone_number"), rs.getString("town"), rs.getString("address"))  ;				
+					buyer = new Buyer(rs.getInt("user_id"),rs.getString("username"), rs.getString("password"),rs.getString("name"), rs.getString("surname"), rs.getString("email"))  ;				
 				}
 				
 				rs.close();
@@ -137,8 +137,8 @@ public class BuyerDAO {
 					throw new Exception("You must open a connection first");
 				}
 				
-				// "INSERT INTO  buyer (username, password, name, surname, email, phone_number, address, town) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
-				 String sql= "INSERT INTO `buyer`(`username`, `password`, `name`, `surname`, `email`, `phone_number`, `address`, `town`) VALUES (?, ?, ?, ?, ?, ?, ?, ?);";
+				// "INSERT INTO  buyer (username, password, name, surname, email) VALUES (?, ?, ?, ?, ?);";
+				 String sql= "INSERT INTO `buyer`(`username`, `password`, `name`, `surname`, `email`) VALUES (?, ?, ?, ?, ?);";
 
 				
 				PreparedStatement stmt = con.prepareStatement(sql);
@@ -149,10 +149,7 @@ public class BuyerDAO {
 				stmt.setString( 3, buyer.getName());
 				stmt.setString( 4, buyer.getSurname());
 				stmt.setString( 5, buyer.getEmail());
-				stmt.setInt( 6, buyer.getPhone_number());
-				stmt.setString( 7, buyer.getAddress());
-				stmt.setString( 8, buyer.getTown());
-				System.out.println(stmt.toString());
+				System.out.println("register buyer method"+stmt.toString());
 				stmt.executeUpdate();			
 				
 				stmt.close();	
@@ -167,7 +164,4 @@ public class BuyerDAO {
 			}
 			
 		}//End of registerBuyer
-		
-
-
 }

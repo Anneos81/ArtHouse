@@ -38,10 +38,6 @@ public class RegisterBuyerController extends HttpServlet {
 		String name = request.getParameter("name");
 		String surname = request.getParameter("surname");
 		String email = request.getParameter("email");
-		String phone1 = request.getParameter("phone");
-		int phone = Integer.parseInt(phone1);
-		String address = request.getParameter("address");
-		String town = request.getParameter("town");
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");	
 		
@@ -53,7 +49,7 @@ public class RegisterBuyerController extends HttpServlet {
 
 		try {
 
-			Buyer buyero = new Buyer(username, password, name, surname, email, phone, town, address);
+			Buyer buyero = new Buyer(username, password, name, surname, email);
 
 			BuyerDAO bdao = new BuyerDAO();
 
@@ -76,8 +72,6 @@ public class RegisterBuyerController extends HttpServlet {
 			
 			errodis.forward(request, response);	
 		}
-
-		
 	}
 
 	/**
@@ -87,5 +81,4 @@ public class RegisterBuyerController extends HttpServlet {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
-
 }

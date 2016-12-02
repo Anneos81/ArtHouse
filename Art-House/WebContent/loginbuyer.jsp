@@ -51,7 +51,7 @@ if(session.getAttribute("user-object") != null) {
         <div class="row">
 
             <div class="col-md-3">
-                <p align="center"><img src="images/ourlogo.png" alt="logo icon" width="100"></p><br>
+                	<p align="center"><a href="homepage.jsp"><img src="images/ourlogo.png" alt="logo icon" width="100"></a></p><br>
                 
                 
 		<%@include file="menu.jsp" %>

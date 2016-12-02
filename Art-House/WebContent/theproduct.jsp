@@ -24,7 +24,7 @@ if (type == "buyer"){
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Art-House Homepage</title>
+<title>Art-House Painting</title>
 <!-- My css -->
 <link href="css/css.css" rel="stylesheet" !important>
 
@@ -69,8 +69,9 @@ if (type == "buyer"){
         <div class="row">
 
             <div class="col-md-3">
-                <p align="center"><img src="images/ourlogo.png" alt="logo icon" width="100"></p><br>
-  <%@include file="menu.jsp" %>
+                	<p align="center"><a href="homepage.jsp"><img src="images/ourlogo.png" alt="logo icon" width="100"></a></p><br>
+				  	
+  	<%@include file="menu.jsp" %>
             </div>
 
             <div class="col-md-9"> 

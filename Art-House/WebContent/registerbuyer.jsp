@@ -43,8 +43,8 @@
         <div class="row">
 
             <div class="col-md-3">
-                <p align="center"><img src="images/ourlogo.png" alt="logo icon" width="100"></p><br>
-                
+                <p align="center"><a href="homepage.jsp"><img src="images/ourlogo.png" alt="logo icon" width="100"></a></p><br>
+               
   <%@include file="menu.jsp" %>
   
            	</div>	 
@@ -69,24 +69,6 @@
 		            <label class="col-sm-2 control-label">Email</label>
 		            <div class="col-sm-10">
 		              <input type="email" class="form-control" name="email" placeholder="Email" required>
-		            </div>
-		          </div>
-		          <div class="form-group">
-		            <label class="col-sm-2 control-label">Phone Number</label>
-		            <div class="col-sm-10">
-		              <input type="text" class="form-control" name="phone" placeholder="Phone number">
-		            </div>
-		          </div>
-		          <div class="form-group">
-		            <label class="col-sm-2 control-label">Address</label>
-		            <div class="col-sm-10">
-		              <input type="text" class="form-control" name="address" placeholder="Address" required>
-		            </div>
-		          </div>
-		          <div class="form-group">
-		            <label class="col-sm-2 control-label">Town</label>
-		            <div class="col-sm-10">
-		              <input type="text" class="form-control" name="town" placeholder="Town" required>
 		            </div>
 		          </div>
 		          <div class="form-group">

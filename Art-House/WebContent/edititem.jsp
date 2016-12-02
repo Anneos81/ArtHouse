@@ -62,7 +62,9 @@
 		<div class="container">
      			<div class="row">
           		 	 <div class="col-md-3">
-          		 	 	   <p align="center"><img src="images/ourlogo.png" alt="logo icon" width="100"></p><br>
+          		 	 	
+          		 	 	   <p align="center"><a href="homepage.jsp"><img src="images/ourlogo.png" alt="logo icon" width="100"></a></p><br>
+               			
                			 <div class="list-group">
 	             		   <a href="profileseller.jsp" class="list-group-item"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Seller: <%=seller.getUsername()%></a>
 	             		   <a href="profileseller.jsp" class="list-group-item">My Products<span class="badge"><%=prodlist.size()%></span></a>
