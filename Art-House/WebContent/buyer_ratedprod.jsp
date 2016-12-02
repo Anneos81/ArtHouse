@@ -88,7 +88,7 @@ Buyer buyer1 = (Buyer)session.getAttribute("user-object");
 			if (rated.size()==0){				
 %>	  
 				  <div>   
-				    <p>You haven't rated any product yet.</p>
+				    <div class="alert alert-success text-center" role="alert"><p>You haven't rated any product yet.</p></div>
 				  </div>
 		
 <% 			}else{
