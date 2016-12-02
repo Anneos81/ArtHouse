@@ -98,7 +98,7 @@ Buyer buyer1 = (Buyer)session.getAttribute("user-object");
 						if (lista.size()==0) {
 					%>
 					<div>
-						<p>You haven't done an order yet.</p>
+						<div class="alert alert-success text-center" role="alert"><p>You haven't done an order yet.</p></div>
 					</div>
 
 					<%
