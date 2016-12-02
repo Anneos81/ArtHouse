@@ -40,6 +40,10 @@ public class LoginBuyerController extends HttpServlet {
 		
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
+		String productId = request.getParameter("product_id");
+		int p = Integer.parseInt(productId);
+		System.out.println("parseint "+ p);
+		String avgRating = request.getParameter("avg_p");
 		
 		RequestDispatcher loginfail = getServletContext().getRequestDispatcher("/loginbuyer.jsp");
 		RequestDispatcher loginsuccess = getServletContext().getRequestDispatcher("/buyer_ratedprod.jsp");
@@ -55,8 +59,13 @@ public class LoginBuyerController extends HttpServlet {
 			Basket basket = new Basket();
 			session.setAttribute("cart-object", basket);
 			session.setAttribute("userid", "buyer");
-			
-			loginsuccess.forward(request, response);
+			System.out.println("this product id " + productId);
+			if (p == 0) {
+				loginsuccess.forward(request, response);
+				System.out.println("OK");
+			} else {
+				response.sendRedirect("theproduct.jsp?id=" + productId + "&avg=" + avgRating);
+			}
 			
 		} catch (Exception e) {
 			
