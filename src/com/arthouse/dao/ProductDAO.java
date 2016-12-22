@@ -36,7 +36,7 @@ public class ProductDAO {
             // object (con)\
         	
         	//con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost/painting", "root", "olgaioak8");
-        	con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/painting", "root", "12345");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/arthouse", "root", "rootroot");
         } catch (Exception e) {
             con = null;
             // throw SQLException if a database access error occurs

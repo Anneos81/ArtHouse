@@ -29,7 +29,7 @@ public class SellerDAO {
 
 			try {
 				// establish a connection with the database and creates a Connection
-				con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/painting", "root", "12345");
+				con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/arthouse", "root", "rootroot");
 			    //con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost/painting", "root", "olgaioak8");
 			} catch (Exception e) {
 				con = null;

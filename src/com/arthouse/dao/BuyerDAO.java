@@ -29,7 +29,7 @@ public class BuyerDAO {
 
 			try {
 				// establish a connection with the database and creates a Connection
-				con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/painting", "root", "12345");
+				con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/arthouse", "root", "rootroot");
 				//con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost/painting", "root", "olgaioak8");
 			} catch (Exception e) {
 				con = null;
@@ -94,13 +94,14 @@ public class BuyerDAO {
 				throw new Exception("You must open a connection first");
 			}
 			
-			String sqlquery= "SELECT * FROM buyer WHERE username='"+ username +"' AND password='"+ password +"';";
+			String sqlquery= "SELECT * FROM buyer WHERE username=? AND password=?;";
 			
 			try {
 				
 				PreparedStatement stmt2 = con.prepareStatement(sqlquery);
-//				stmt2.setString( 1, username );
-//				stmt2.setString( 2, password );
+				stmt2.setString( 1, username );
+				stmt2.setString( 2, password );
+				System.out.println(stmt2);
 				
 				ResultSet rs = stmt2.executeQuery();
 				

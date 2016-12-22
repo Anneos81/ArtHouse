@@ -70,17 +70,14 @@ public class CreateOrderController extends HttpServlet {
 			odao.open(); // open connection
 			System.out.println("ok4");
 			int order_id = odao.insertOrder(ord); 
-			System.out.println("insertOrderOK");
+			
 			
 			for (int i=0; i<basket.size();i++){
 				odao.insertOrderProduct(order_id, basket.get(i).getProduct_id());
 				
 			}
-			System.out.println("insertOrderProductsOK");
 			odao.close(); // close connection
 			session.setAttribute("message", "Your order has been succesfully submited!");
-			
-			System.out.println("setAttributeOK");
 			succdis.forward(request, response);
 			return;
 
