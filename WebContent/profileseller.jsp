@@ -85,7 +85,7 @@ if(session.getAttribute("userid")!= "seller"){
             
             	<% if(prodlist.size()==0){%>
 				  <div>   
-				    <p>You haven't upload any product yet.</p>
+				    <div class="alert alert-success text-center" role="alert"><p>You haven't upload any product yet.</p></div>
 				  </div>
 		
 <% 			}else

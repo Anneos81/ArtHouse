@@ -81,8 +81,8 @@ Buyer buyer1 = (Buyer)session.getAttribute("user-object");
             
             <% if(session.getAttribute("message") != null) { %>		
 				<div class="alert alert-success text-center" role="alert"><%=session.getAttribute("message").toString() %></div>
-			<% }
-            if(session.getAttribute("message")!=null){
+			<% //}
+           // if(session.getAttribute("message")!=null){
             	basket.clear();
             	session.setAttribute("message", null); 
             }%>
